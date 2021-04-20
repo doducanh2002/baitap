@@ -1,0 +1,18 @@
+1.tại sao cần dùng vòng lặp?
+   Trong lập trình với ngôn ngữ java, khi chúng ta muốn lặp đi lặp lại một công việc nào đó N lần. Để giải quyết vấn đề trên
+chúng ta cần sử dụng đến kỹ thuật gọi là vòng lặp. Trong java cung cấp cho chúng ta 3 cách để thực thi vòng lặp: for, whlie và do-while
+2.So sánh for và while nhé?
+   Trong quá trình có số lần lặp cố định thì vòng lặp for được khuyến khích sử dụng, còn số lần lặp không ổn định thì nên sử dụng vòng lặp 
+while và do-while
+   Cú pháp vòng lặp for
+         for (khoi_tao_bien ; check_dieu_kien ; tang/giam_bien) {
+               // Khối lệnh được thực thi
+         }
+   Cú pháp vòng lặp while 
+         while(condition) {  
+              // Khối lệnh được lặp lại cho đến khi condition = False
+         }     
+   Cú pháp vòng lặp do-while
+         do { 
+              // Khối lệnh được thực thi
+         } while(condition);

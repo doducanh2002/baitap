@@ -1,0 +1,2 @@
+commit -a 
++cho ta biết những sự thay đổi tracked file, rồi commit các file.
