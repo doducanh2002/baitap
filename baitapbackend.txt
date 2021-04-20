@@ -1,0 +1,7 @@
+câu 1 sau int a,b,c thêm" ;" sau a=0 cũng thêm ";"
+câu 2 thay ngoặc đơn bằng ngoặc đôi""
+câu 3 không dùng int mà thay vào đó dùng float hoặc double
+câu 4 thay int c=a thành float c=a 
+câu 5 đổi chỗ i=b; thành b=i;
+câu 6 sử a=false, thành a=false;
+câu 7 chưa khai báo biến"r" biến "r" sẽ được khai báo int r;

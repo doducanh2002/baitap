@@ -1,0 +1,11 @@
+public class baitap2 {
+    public static void main(String[] args) {
+        byte a=5;
+        byte b=10;
+        System.out.print("b=");
+        System.out.println(a);
+        System.out.print("a=");
+        System.out.print(b);
+
+    }
+}

@@ -1,0 +1,4 @@
+1. sử dụng github chúng ta có thể code 1 project trền nhiều máy 
+ Vì chúng ta có thể đưa code lên trên github, lấy project về các máy tính khác nhau qua github, có thể sửa đổi rồi lưu lại trên git, chỉ cần có quyền truy cập.
+2. ta dùng gitpush để cập nhật những thay đổi
+3. ta dùng gitfull để lấy thay đổi mới về máy tính

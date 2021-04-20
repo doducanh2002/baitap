@@ -1,0 +1,24 @@
+Câu 1: Giả sử trong một thử mục có tên Buoi2 có 2 file mới tạo lần lượt là bai1.txt và bai2.txt. Có những cách nào đã học trong  
+buổi 1 để chuyển trạng thái 2 file mới từ Untracked files(báo màu đỏ) sang Staged (Xanh lá).
+      1. sử dụng git add.
+      2. sử dụng git add bai1.txt
+                 git add bai2.txt
+Câu 2: Hãy phân biệt tracked vs untracked files trong git
+       Tracked – Là tập tin đã được đánh dấu theo dõi trong Git để mình làm việc làm việc với nó. 
+       Untracked -Là tập tin chưa được đánh dấu trong Git 
+Câu 3: Hãy nêu ý nghĩa 3 trạng thái của file trong git (3 stages in git). Cách lệnh sử dụng trong git để chuyển các trạng thái.
+       Committed có nghĩa là dữ liệu đã được lưu trữ một cách an toàn trong cơ sở dữ liệu, tức là những gì bạn đã commit thành công.
+       Staged là bạn đã đánh dấu sẽ commit phiên bản hiện tại của một tập tin đã chỉnh sửa trong lần commit sắp tới. Trạng thái này 
+       xảy ra khi bạn sử dụng lệnh git add <file_name> nhưng chưa commit.
+       Modified có nghĩa là bạn đã thay đổi tập tin nhưng chưa commit vào cơ sở dữ liệu, tức là bạn chưa sử dụng lênh git add và git
+       commit.
+       Cách đổi trạng thái 
+       Committed: sửa + add+ commid
+       $ git checkout task1
+       $ git add baitap.txt
+       $ git commit -m "Sua file baitap.txt"
+       Staged: sửa + add
+       $ git checkout task1
+       $ git add baitap.txt
+       Modified: sửa
+       $ git checkout task1

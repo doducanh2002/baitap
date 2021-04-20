@@ -1,0 +1,5 @@
+Câu 1: Nêu sự khác nhau của Git Local và Git Sever
+         Git local chỉ lưu lại file trên máy của mình còn Git sever có thể chia sẻ cho nhiều người
+Câu 2: Nếu không sử dụng github (git server) thì project của bạn có thể sử dụng git ở local để xem
+       các thay đổi trong project của bạn không? tại sao?
+       Có bằng cách sử dụng git log
