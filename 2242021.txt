@@ -1,0 +1,16 @@
+     1.Git branch là gì ?
+       Branch là cái dùng dể phân nhánh và ghi lại luồng của lịch sử. Brach đã phân nhánh sẽ không ảnh hưởng đến brach khác nên
+ có thể tiến hành nhiều thay đổi đồng thời trong cùng 1 repository.
+       Branch đã phân nhánh có thể chỉnh sửa tổng hợp lại thành 1 branch bằng việc hợp lại với các branch khác.
+       Khi làm việc các thành viên sẽ tạo branch của mình từ branch chính để không anh hưởng đến công việc của các thành viên khác.
+ Sau khi hoàn thành công việc ta sẽ thực hiện đưa thay đổi của mình vào branch chính. 
+       Khi sử dụng branch trong trường họp có phát sinh vấn đề việc kiểm tra cũng sẽ dễ dàng hơn
+     2.Branch master 
+      Khi tiến hành commit lần đầu git sẽ tạo một branch có tên master.
+      Các commit khác sẽ được thêm vào branch master cho đến khi ta đổi branch.
+     3.Các cách sử dụng git branch 
+        git branch : xem toàn bộ branch
+        git branch tên_branch: tạo branch
+        git checkout tên_branch: truy cập kiểm tra mã nguồn trong branch
+        git merge: gộp dữ liệu từ một branch
+        git branch -d tên_branch: xóa branch

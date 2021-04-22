@@ -1,0 +1,41 @@
+      So sánh while với do-while
+      Vòng lặp while kiểm tra điều kiện ở đầu vòng lặp và nếu điều kiện được thỏa mãn câu lệnh bên trong vòng lặp, được thực thi.Trong vòng lặp do-while,
+ điều kiện được kiểm tra sau khi thực hiện tất cả các câu lệnh trong phần thân của vòng lặp.
+      Nếu điều kiện trong một vòng lặp while là sai thì không một câu lệnh nào trong vòng lặp được thực thi và nếu điều kiện trong vòng lặp'do-while' 
+ là sai thì thân của vòng lặp được thực thi ít nhất một lần thì điều kiện được kiểm tra.
+       Cú pháp vòng lặp while 
+         while(condition) {  
+              // Khối lệnh được lặp lại cho đến khi condition = False
+         }     
+   Cú pháp vòng lặp do-while
+         do { 
+              // Khối lệnh được thực thi
+         } while(condition);
+        ví dụ tính tổng từ 1 đến 5 
+        dùng While 
+            public class whlie {
+            public static void main(String[] args) {
+                int a= 1;
+                int sum=0;
+                while (a <= 5) {
+                sum+=a;
+                a++;
+                }
+            System.out.println(sum);
+            }
+            }
+       dùng Do-while
+            public class whlie {
+            public static void main(String[] args) {
+                int a= 1;
+                int sum=0;
+            do {
+                sum+=a;
+                a++;
+            } while (a <= 5);
+                System.out.println(sum);
+            }
+            }
+
+
+
