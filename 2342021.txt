@@ -1,0 +1,6 @@
++ Giống:
+    Đều dùng để chuyển nhánh
++ Khác:
+    Git checkout được dùng phổ biến. Git check out có thể tạo nhánh mới và chuyển 
+vào nhánh đó luôn
+    Git switch được dùng ít hơn chỉ dùng để chuyển nhánh
