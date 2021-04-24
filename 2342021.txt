@@ -3,4 +3,8 @@
 + Khác:
     Git checkout được dùng phổ biến. Git check out có thể tạo nhánh mới và chuyển 
 vào nhánh đó luôn
+<<<<<<< HEAD
     Git switch được dùng ít hơn chỉ dùng để chuyển nhánh
+=======
+    Git switch được dùng ít hơn chỉ dùng để chuyển nh
+>>>>>>> cc17b315d11e4f39e78310e81d95e94d3a9da3c5
