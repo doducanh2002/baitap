@@ -1,0 +1,83 @@
+Import java.util.Scanner;
+
+import static java.lang.System.*;
+
+public class bai3 {
+    public static void main(String[] args) {
+        byte diem=0;
+        System.out.println("Mời bạn chọn A,B,C,hoặc D");
+        System.out.println("câu 1: 1+1=?");
+        System.out.println("1:=1");
+        System.out.println("2:=2");
+        System.out.println("3:=3");
+        System.out.println("4:=4");
+        byte kytu;
+        Scanner so = new Scanner(in);
+
+        kytu = so.nextByte();
+        switch (kytu) {
+            case 1: out.println("Đáp án sai"); break;
+            case 2: { out.println("Đáp án đúng. Chúc mừng bạn được 2 điểm");
+            diem +=2; } break;
+            case 3: out.println("Đáp án sai"); break;
+            case 4: out.println("Đáp án sai"); break;
+            default: out.println("Bạn nhập sai đáp án"); break; }
+        out.println("câu 2: 2*10=?");
+        out.println("1:=2");
+        out.println("2:=40");
+        out.println("3:=25");
+        out.println("4:=20");
+        kytu = so.nextByte();
+        switch (kytu) {
+            case 1: out.println("Đáp án sai");break;
+            case 2: out.println("Đáp án sai");break;
+            case 3: out.println("Đáp án sai");break;
+            case 4: { out.println("Đáp án đúng bạn được 2 điểm");
+                     diem +=2; }break;
+            default: out.println("Bạn nhập sai đáp án"); break; }
+        out.println("câu 3: 10-2=?");
+        out.println("1:=7");
+        out.println("2:=40");
+        out.println("3:=8");
+        out.println("4:=20");
+        kytu = so.nextByte();
+        switch (kytu) {
+            case 1: out.println("Đáp án sai");break;
+            case 2: out.println("Đáp án sai");break;
+            case 3: {
+                out.println("Đáp án đúng bạn được 2 điểm");
+                     diem +=2 ;} break;
+            case 4: out.println("Đáp án sai");break;
+            default: out.println("Bạn nhập sai đáp án");break; }
+        out.println("câu 4: 1654-1375=?");
+        out.println("1:=279");
+        out.println("2:=319");
+        out.println("3:=299");
+        out.println("4:=310");
+        kytu = so.nextByte();
+        switch (kytu) {
+            case 1: {
+                out.println("Đáp án đúng bạn được 2 điểm");
+                diem +=2; }break;
+            case 2: out.println("Đáp án sai");break;
+            case 3: out.println("Đáp án sai"); break;
+            case 4: out.println("Đáp án sai"); break;
+            default: out.println("Bạn nhập sai đáp án"); break;
+        }
+        out.println("câu 5: 1654*1375=?");
+        out.println("1:=2274250");
+        out.println("2:=2275250");
+        out.println("3:=2265250");
+        out.println("4:=2255250");
+        kytu = so.nextByte();
+        switch (kytu) {
+            case 1: { out.println("Đáp án đúng bạn được thêm 2 điểm"); diem +=2;}
+            break;
+            case 2: out.println("Đáp án sai");break;
+            case 3: out.println("Đáp án sai"); break;
+            case 4: out.println("Đáp án sai"); break;
+            default: out.println("Bạn nhập sai đáp án"); break;}
+            System.out.print("Số điểm mà bạn đạt được là");
+        out.println(diem);
+    }
+}

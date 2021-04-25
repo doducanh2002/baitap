@@ -1,0 +1,12 @@
+bài 0:
+Giống: +đều là câu lệnh lặp
+Khác: +whlie sẽ không lặp nếu điều kiện sai, còn do while sẽ lặp ít nhất 1 lần
+      +trong While thì điều kiện lặp xuất hiện ở đầu, trong do whlie thì điều kiện điều khiển xuất hiện ở cuối vòng lặp,
+      While( điều kiện ){
+      các câu lệnh; // phần thân của vòng lặp
+      }
+      Do{
+      .
+      các câu lệnh; // thân vòng lặp.
+      .
+      } while (Điều kiện);
