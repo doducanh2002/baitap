@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class bai2642021 {
+    public static void main(String[] args) {
+        Scanner nhap = new Scanner(System.in);
+        float a,b,c;
+        double    x1,x2;
+        double Z;
+        System.out.println("Ta có phương trình ax^2+bx+c=0");
+        System.out.println("Mời bạn nhập lần lượt a,b,c:");
+        a= nhap.nextByte();
+        b= nhap.nextByte();
+        c= nhap.nextByte();
+        Z=b*b-4*a*c;
+        if (Z>0)
+        {
+            System.out.println("Phương trình có 2 nghiệm lần lượt là ");
+            x1=((-b + Math.sqrt(Z))/(2*a));
+            x2=((-b - Math.sqrt(Z))/(2*a));
+            System.out.println("Nghiệm 1 là :" +x1);
+            System.out.println("Nghiệm 2 là :" +x2);
+        }
+        if (Z<0)
+        {
+            System.out.println("Phương trình vô nghiệm ");
+
+        }
+        else {
+            System.out.println("phương trình có 1 nghiệm là");
+
+            double x3 = (-b / (2 * a));
+            System.out.println(x3);
+
+        }
+    }
+}
