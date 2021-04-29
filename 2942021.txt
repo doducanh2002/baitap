@@ -1,0 +1,16 @@
+Viết một bài tìm hiểu về 3 tùy chọn merge : "create a merge commit
+ "Squash and merge", "Rebase and merge" khi thực hiện merge pull request trên github.
++ Create a merge commit :
+     Đây là tùy chọn mặc định của GitHub khi pull request. Phương thức này 
+lấy tất cả commit trong branch vào hợp nhất chúng. Create a merge commit sẽ tạo một commit mới
+trong lịch sử commit
+    Cách sử dụng git --no-ff
++ Squash and merge :
+     Phương thức này đưa các commit vào bên trong pull request của bạn và "thu gọn"
+ chúng thành một commit duy nhất.
+    Cách sử dụng git merge --ff-only
++ Rebase and merge : 
+     Có thể đưa tất cả các commit từ head branch sẽ được đưa vào branch master mà không cần merge
+commit 
+     cách sử dụng : git checkout <feature_branch>
+                    git rebase <target_branch>
