@@ -1,0 +1,25 @@
+Tóm tắt OOP :
+1.What : OOP là gì ? 
+OOP là Object-oriented programming có ý nghĩa là lập trình hướng đối tượng.
+OOP là một phương pháp lập trình dựa trên khái niệm về lớp và đối tượng. OOP 
+tập trung vào các đối tượng thao tác hơn là logic để thao tác chúng, giúp code dễ quản lý, tái sử dụng được và dễ bảo trì.
+Đối tượng (Object) gồm 2 thành phần 
+Thuộc tính (Attribute): là những thông tin, đặc điểm của đối tượng
+Phương thức (Method): là những hành vi mà đối tượng có thể thực hiện
+Lớp (Class)
+Lớp là sự trừu tượng hóa của đối tượng. Những đối tượng có những đặc tính tương tự nhau sẽ được tập hợp thành một lớp.
+2.Why : Tại sao lại sử dụng OOP ?
+Khi sử dụng OOP sẽ đem lại các lợi ích như
+Dễ dàng mở rộng dự án
+Giúp lập trình viên tiết kiệm đáng kể tài nguyên cho hệ thống
+OOP có tính bảo mật cao và có khả năng tái sử dụng cao.
+Phù hợp khi thiết lập các phần mềm phức tạp, phần mềm lớn. OOP được đánh giá là dễ học, năng suất, thao tác đơn giản và dễ bảo trì…
+3.When :Sử dụng OOP khi nào ?
+Ta sẽ sử dụng OOP khi mà làm các dự án ,  chương trình lớn.
+4.Where : OOP sử dụng ở những ngôn ngữ nào?
+OOP được sử dụng trong những ngôn ngữ như : Java, C++/C, Python, Ruby....
+5.How OOP dùng như thế nào 
+xác định các đối tượng xuất hiện trong bài toán
+xác định thuộc tính và hành động cho các đối tượng
+xác định mối quan hệ giữa các đối tượng
+mô tả các đối tượng và sự tương tác giữa các đối tượng bằng ngôn ngữ lập trình.

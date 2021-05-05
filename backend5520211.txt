@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class bai2 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            do {
+                System.out.println("mời bạn nhập một kí tự từ bàn phím");
+                String kytu = scanner.nextLine();
+                if (kytu.equals("A")) { break; }
+                System.out.println("Ky tu vua nhap vao: " + kytu);
+            } while (true);
+        }
+}
