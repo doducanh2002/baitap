@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class bafi1 {
+    public static void main(String[] args) {
+        int n;
+        int[] a=new int[4];
+        int  so;
+        do {
+            System.out.println("Nhập vào 1 số có 4 chữ số :");
+            Scanner sc = new Scanner(System.in);
+            so = sc.nextInt();
+            System.out.println("Đọc thành chữ là");
+        } while (so<1000||so>9999);
+        for (n=0;n<4;n++){
+            a[n]=so%10;
+            so=so/10;
+        }
+        for (n=0;n<4;n++){
+        switch (a[n]) {
+            case 9:
+                System.out.print(" chín ");
+                break;
+            case 8:
+                System.out.println(" tám");
+                break;
+            case 7:
+                System.out.println(" bảy");
+                break;
+            case 6:
+                System.out.println(" sáu");
+                break;
+            case 5:
+                System.out.println(" năm");
+                break;
+            case 4:
+                System.out.println(" bốn");
+                break;
+            case 3:
+                System.out.println(" ba");
+                break;
+            case 2:
+                System.out.println(" hai");
+                break;
+            case 1:
+                System.out.println(" một");
+                break;
+            case 0:
+                System.out.println(" không");
+                break;
+            default:
+                System.out.println("phải nhập số 4 chữ số ");
+                break;
+        }
+    }
+        }
+}
