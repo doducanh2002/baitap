@@ -1,0 +1,6 @@
+Trong gitflow, khi một nhánh hotfix được tạo, sau khi fix xong lỗi thì nó sẽ được merge vào những nhánh nào và lý do vì
+ sao lại cần merge vào những nhánh đó.
+Nhánh hot fix được tạo trực tiếp từ nhánh Master vì cần phải sửa nhanh để phục vụ khách hàng ngay nên hot fix sẽ megre trực tiếp vào master
+luôn
+Ngoài ra hot fix sẽ được merge vào develop để các người lập trình biết code đã sửa để khi update version tránh lỗi
+Ta còn phải merge vào canary và staging vì nếu fix ở master thì ở canary và staging vẫn còn lỗi
