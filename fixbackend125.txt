@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class BaiTap1252021 {
+    static boolean KiemTra(String KiemTraChuoi){
+        int soKiTu=KiemTraChuoi.length();
+        for (int i = 0; i < soKiTu; i++)
+            if (KiemTraChuoi.charAt(i) < KiemTraChuoi.charAt(i + 1))
+                return true;
+        return false;
+    }
+    public static void main(String[] args) {
+        String chuoi;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Mời bạn nhập một chuỗi để kiểm tra :");
+        chuoi = sc.nextLine();
+        System.out.println("Chuỗi bạn vừa nhập là : " + chuoi);
+
+            if (KiemTra(chuoi))
+            { System.out.println("Chuỗi được sắp xếp"); }
+            else
+                System.out.println("Chuỗi không được sắp xếp");
+    }
+
+
+}
