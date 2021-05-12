@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class BaiTap1252021 {
+
+    public static void main(String[] args) {
+        String chuoi;
+        int soKiTu;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Mời bạn nhập một chuỗi để kiểm tra :");
+        chuoi = sc.nextLine();
+        System.out.println("Chuỗi bạn vừa nhập là : " + chuoi);
+        soKiTu = chuoi.length();
+        for (int i = 0; i < soKiTu; i++)
+            if (chuoi.charAt(i) < chuoi.charAt(i + 1))
+            { System.out.println("Chuỗi được sắp xếp"); }
+            else
+                System.out.println("Chuỗi không được sắp xếp");
+    }
+}
