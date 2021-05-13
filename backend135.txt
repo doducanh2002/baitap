@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class BaiTap135 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n, i,Max;
+        int demMax = 0;
+        int demMin = 0;
+        int soLonNhat = 0;
+        System.out.println("Mời nhập số phần tử trong mảng :");
+        n = sc.nextInt();
+        int[] a = new int[n];
+        System.out.println("Mời bạn nhập lần lượt các phần tử :");
+        for (i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+        int soNhoNhat = n;
+        for (i = 0; i < n; i++) {
+            if (a[i] > soLonNhat) {
+                soLonNhat = a[i];
+                if (a[i] == soLonNhat) {
+                    demMax = i + 1;
+                }
+            }
+                if (a[i] < soNhoNhat) {
+                    soNhoNhat = a[i];
+                    if (a[i] == soNhoNhat) {
+                        demMin = i + 1;
+                    }
+                }
+            }
+            Max=soLonNhat-soNhoNhat;
+            System.out.println("Max :" + Max);
+            System.out.println("Vị Trí : "+demMin+" " +demMax);
+    }
+}
