@@ -40,7 +40,9 @@ public static void main(String[] args) {
         for (i = 0; i < soPhanTu; i++) {
             mang[i] = sc.nextInt();
         }
-        Max=soLonNhat-soNhoNhat;
+        demMax=TimSoLon(mang);
+        demMin=TimSoNho(mang);
+                Max=soLonNhat-soNhoNhat;
         System.out.println("Max :" + Max);
         System.out.println("Vị Trí : "+demMin+" " +demMax);
     }
