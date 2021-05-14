@@ -1,7 +1,7 @@
 1.Cơ sở dữ liệu là gì?
 Cơ sở dữ liệu tập hợp dữ liệu (văn bản, âm thanh, hình ảnh, số liệu, v.v.) của một hay nhiều lĩnh vực ứng dụng, được tổ chức
 theo một cấu trúc nhất định, sao cho các chương trình máy tính có thể khai thác, nhằm phục vụ nhiều người sử dụng.
-2.Hệ cơ sở dữ liệu là gì?
+2.Hệ quản trịnh cơ sở dữ liệu là gì?
 Là một phần mềm cho phép tạo lập các CSDL cho các ứng dụng khác nhau và điều khiển mọi truy cập tới các CSDL đó
 3.Các mức thể hiện cơ sở dữ liệu.
 + Mức khung hình: hiểu đơn giản là phần dữ liệu trong cơ sở dữ liệu mà chúng ta cần sử dụng, chỉ quan tâm đến phần chúng ta cần thôi. 
