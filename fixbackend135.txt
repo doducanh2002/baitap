@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class dfafa {
+public static int TimSoLon(int [] mang) {
+    int demMax=0;
+    for (int i = 0; i < mang.length; i++) {
+        int soLonNhat=mang[0];
+        if (mang[i] > soLonNhat) {
+            soLonNhat = mang[i];
+            if (mang[i] == soLonNhat) {
+                demMax = i + 1;
+            }
+        }
+    }
+    return demMax;
+}
+    public static int TimSoNho(int [] mang) {
+        int demMin=0;
+        for (int i = 0; i < mang.length; i++) {
+            int soNhoNhat=mang.length;
+            if (mang[i] < soNhoNhat) {
+                soNhoNhat = mang[i];
+                if (mang[i] == soNhoNhat) {
+                    demMin = i + 1;
+                }
+            }
+        }
+        return demMin;
+    }
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int soPhanTu, i,Max;
+        int demMax ;
+        int demMin ;
+        int soLonNhat = 0;
+        System.out.println("Mời nhập số phần tử trong mảng :");
+        soPhanTu = sc.nextInt();
+        int[] mang = new int[soPhanTu];
+        System.out.println("Mời bạn nhập lần lượt các phần tử :");
+        int soNhoNhat = soPhanTu;
+        for (i = 0; i < soPhanTu; i++) {
+            mang[i] = sc.nextInt();
+        }
+        Max=soLonNhat-soNhoNhat;
+        System.out.println("Max :" + Max);
+        System.out.println("Vị Trí : "+demMin+" " +demMax);
+    }
+}
