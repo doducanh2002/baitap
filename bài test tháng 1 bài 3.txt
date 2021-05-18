@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Inralanxuathien {
+    public static void main(String[] args) {
+        String  chuoiKiTu;
+        int doDaiChuoi,demKiTu=0;
+        char kytu=' ';
+        Scanner scanner =new Scanner(System.in);
+        System.out.println("Mời Bạn nhập chuỗi ký tự : ");
+            chuoiKiTu=scanner.next();
+            doDaiChuoi=chuoiKiTu.length();
+        System.out.println("Mời bạn nhập ký tự cần tìm :");
+        try
+        {
+            kytu = (char) System.in.read();
+        }
+        catch(Exception e)
+        {
+            System.out.println("Nhập lỗi!");
+        }
+        System.out.println("Ky tu vua nhap:" + kytu);
+        for (int i=0;i<doDaiChuoi;i++)
+        {
+            if (chuoiKiTu.charAt(i)==kytu)
+            {
+                demKiTu++;
+            }
+        }
+    System.out.println("Ký Tự " + kytu + " xuất hiện "+ demKiTu);
+    }
+}
