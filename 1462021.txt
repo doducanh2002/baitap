@@ -1,0 +1,2 @@
+Bài 1: So sánh  2 famework Scrum và Spotify
+ Scrum là một quy trình phát triển phần mềm theo phương pháp Agile. Chính vì thế, Scrum tuân thủ các nguyên tắc của Agile Manifesto.
