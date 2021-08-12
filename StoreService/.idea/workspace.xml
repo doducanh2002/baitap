@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="00f6c5b0-fd72-4ea8-a682-6cbf320ad1bc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1w1p7L2I1ZhtxGBkUO8quspNDQR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="E:/restfull-api2" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IntelliJ IDEA 2021.1.3\jbr\bin\api\IdeaProjects\demo\StoreService\src\main\resources" />
+      <recent name="E:\IntelliJ IDEA 2021.1.3\jbr\bin\api\IdeaProjects\demo\StoreService\src\main\java\com\example\storeservice" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IntelliJ IDEA 2021.1.3\jbr\bin\api\IdeaProjects\demo\StoreService\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="StoreServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="StoreService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.storeservice.restfullapi.StoreServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00f6c5b0-fd72-4ea8-a682-6cbf320ad1bc" name="Default Changelist" comment="" />
+      <created>1627635782828</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627635782828</updated>
+      <workItem from="1627635784280" duration="2703000" />
+      <workItem from="1627652064922" duration="6000" />
+      <workItem from="1627653938664" duration="2018000" />
+      <workItem from="1627717577342" duration="6398000" />
+      <workItem from="1627785243451" duration="4155000" />
+      <workItem from="1627803606985" duration="277000" />
+      <workItem from="1627805235824" duration="2922000" />
+      <workItem from="1627808211102" duration="1212000" />
+      <workItem from="1627831282252" duration="926000" />
+      <workItem from="1627836350094" duration="652000" />
+      <workItem from="1627837121756" duration="491000" />
+      <workItem from="1627866406028" duration="2416000" />
+      <workItem from="1627869769546" duration="300000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$APPLICATION_HOME_DIR$/jbr/bin/api/IdeaProjects/demo/StoreService/src/main/java/com/example/storeservice/restfullapi/model/Product.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$APPLICATION_HOME_DIR$/jbr/bin/api/IdeaProjects/demo/StoreService/src/main/java/com/example/storeservice/restfullapi/service/iml/StoreService.java</url>
+          <line>12</line>
+          <properties class="com.example.storeservice.restfullapi.service.iml.StoreService" method="updateProduct">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
