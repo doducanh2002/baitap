@@ -10,6 +10,7 @@ import org.squad3.library.user.persistance.entites.RoleEntity;
 import org.squad3.library.user.persistance.entites.UserEntity;
 import org.squad3.library.user.persistance.entites.UserRoleEntity;
 
+import java.util.Objects;
 import java.util.Optional;
 
 @AllArgsConstructor
@@ -20,7 +21,6 @@ public class UserRepositoryConverter implements RepositoryConverter<UserEntity, 
 
     @Override
     public UserEntity mapToTable(User userPersistence) {
-        //TODO: convert user entity -> user entity mapping (table)
         return Optional.ofNullable(userPersistence)
                 .map(up -> {
                     final UserRoleEntity userRoleEntity = UserRoleEntity.builder()
@@ -42,7 +42,6 @@ public class UserRepositoryConverter implements RepositoryConverter<UserEntity, 
 
     @Override
     public User mapToEntity(UserEntity userTable) {
-        //TODO: convert user entity mapping (table) -> user entity
         return Optional.ofNullable(userTable)
                 .map(ut -> {
                     return User.builder()
