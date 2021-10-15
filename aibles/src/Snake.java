@@ -11,7 +11,7 @@ public class Snake extends Animal{
 
     @Override
     public void crawl() {
-        System.out.println("bò");
+        System.out.println("Crawl");
     }
     }
 
