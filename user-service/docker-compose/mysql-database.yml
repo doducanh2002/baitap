@@ -3,7 +3,7 @@ version: "3.0"
 services:
   mysql-database:
     image: mysql
-    container_name: sqa_db
+    container_name: squad3-livrary-user-db
     volumes:
       - squad3_library_user:/var/lib/mysql
     ports:

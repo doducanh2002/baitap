@@ -1,27 +1,45 @@
 package org.squad3.library.user.persistance.impl;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CachePut;
 import org.squad3.library.shared.RepositoryConverter;
-import org.squad3.library.user.Account;
 import org.squad3.library.user.User;
-import org.squad3.library.user.persistance.converters.AccountRepositoryConverter;
 import org.squad3.library.user.persistance.entites.UserEntity;
-import org.squad3.library.user.persistance.repositories.AccountRepository;
 import org.squad3.library.user.persistance.repositories.UserRepository;
 import org.squad3.library.user.ports.UserRepositoryService;
 
 import java.util.Optional;
 
-@AllArgsConstructor
+@Slf4j
+@RequiredArgsConstructor
 public class UserRepositoryServiceImpl implements UserRepositoryService {
 
     private final UserRepository userRepository;
     private final RepositoryConverter<UserEntity, User> userRepositoryConverter;
 
     @Override
-    public Optional<User> getUserName(String username) {
+    @CachePut(value = "users")
+    public User saveUser(User user) {
+        final UserEntity userEntity = userRepositoryConverter.mapToTable(user);
+        return userRepositoryConverter.mapToEntity(userRepository.save(userEntity));
+    }
+
+    @Override
+    public boolean isEmailExisted(String email) {
+        return userRepository.existsUserEntityByEmail(email);
+    }
+
+    @Override
+    public Optional<User> getUserByUsername(String username) {
         final UserEntity userEntity = userRepository.findByAccountEntityUsername(username)
+                .orElse(null);
+        return Optional.ofNullable(userRepositoryConverter.mapToEntity(userEntity));
+    }
+
+    @Override
+    public Optional<User> getUserByEmail(String email) {
+        final UserEntity userEntity = userRepository.findByEmail(email)
                 .orElse(null);
         return Optional.ofNullable(userRepositoryConverter.mapToEntity(userEntity));
     }

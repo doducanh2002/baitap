@@ -6,7 +6,7 @@ import org.squad3.library.user.persistance.entites.RoleEntity;
 
 import java.util.Optional;
 
-public class RoleRepositoryConverter implements RepositoryConverter<RoleEntity, Role>{
+public class RoleRepositoryConverter implements RepositoryConverter<RoleEntity, Role> {
 
     @Override
     public RoleEntity mapToTable(Role rolePersistence) {

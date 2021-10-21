@@ -13,9 +13,9 @@ public class SelfValidating<T> {
         validator = validatorFactory.getValidator();
     }
 
-    protected void validateSelf(){
+    public void validateSelf() {
         Set<ConstraintViolation<T>> violations = validator.validate((T) this);
-        if (!violations.isEmpty()){
+        if (!violations.isEmpty()) {
             throw new ConstraintViolationException(violations);
         }
     }

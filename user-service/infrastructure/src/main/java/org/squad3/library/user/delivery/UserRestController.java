@@ -4,5 +4,7 @@ import org.squad3.library.user.delivery.responses.SystemResponse;
 import org.squad3.library.user.delivery.rest.dto.UserDTO;
 
 public interface UserRestController {
-    SystemResponse<UserDTO> getUserName(String username);
+    SystemResponse<UserDTO> createUser(final UserDTO user);
+    SystemResponse<UserDTO> getUserByUsername(final String username);
+    SystemResponse<UserDTO> getUserByEmail(final String email);
 }

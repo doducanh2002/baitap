@@ -20,9 +20,9 @@ public class Role extends SelfValidating<Role> implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this ==o)   return true;
-        if (!(o instanceof User))   return false;
-        User user = (User) o;
-        return Objects.equals(getId(), user.getId());
+        if (!(o instanceof Role))   return false;
+        Role role = (Role) o;
+        return Objects.equals(getId(), role.getId());
     }
 
     @Override

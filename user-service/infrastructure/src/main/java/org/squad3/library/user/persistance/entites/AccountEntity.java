@@ -4,9 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Objects;
 
 @Data
@@ -15,21 +14,20 @@ import java.util.Objects;
 @Entity
 @Table(name = "account")
 @Builder
-@EntityListeners(AuditingEntityListener.class)
-public class AccountEntity extends BaseEntity implements Serializable {
+public class AccountEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
-    @Column(name = "username")
+    @Column(name = "username", length = 20)
     private String username;
 
-    @Column(name = "password")
+    @Column(name = "password", length = 255)
     private String password;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private UserEntity userEntity;
 
@@ -45,5 +43,6 @@ public class AccountEntity extends BaseEntity implements Serializable {
     public int hashCode() {
         return 31;
     }
+
 
 }

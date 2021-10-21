@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Objects;
 
 @Data
@@ -15,7 +16,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "role")
 @Builder
-public class RoleEntity extends BaseEntity implements Serializable {
+public class RoleEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

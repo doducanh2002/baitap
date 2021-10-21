@@ -2,6 +2,7 @@ package org.squad3.library.user.delivery.responses;
 
 import lombok.Builder;
 import lombok.Data;
+
 import java.io.Serializable;
 
 @Data

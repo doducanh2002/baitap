@@ -1,0 +1,14 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="changelog/20210910-1702-add-table-user.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/20210913-2243-add-table-account.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/20210913-2310-add-table-role.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/20210913-2330-add-table-user-role.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog>

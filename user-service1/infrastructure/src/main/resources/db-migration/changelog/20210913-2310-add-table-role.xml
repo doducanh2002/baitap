@@ -1,0 +1,27 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="20210913-2310-001" author="ThuLM">
+        <createTable tableName="role">
+            <column name="id" type="integer">
+                <constraints primaryKey="true" primaryKeyName="pk_role_id"/>
+            </column>
+            <column name="role" type="varchar(10)"/>
+            <column name="created_date" type="TIMESTAMP"/>
+            <column name="last_updated_date" type="TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20210913-2325-001" author="ThuLM">
+        <loadData tableName="role"
+                  file="db-migration/csv/role.csv">
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

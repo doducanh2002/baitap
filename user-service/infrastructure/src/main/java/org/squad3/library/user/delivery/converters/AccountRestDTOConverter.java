@@ -4,6 +4,7 @@ import org.squad3.library.shared.RestDTOConverter;
 import org.squad3.library.user.Account;
 import org.squad3.library.user.delivery.rest.dto.AccountDTO;
 
+import java.util.Objects;
 import java.util.Optional;
 
 public class AccountRestDTOConverter implements RestDTOConverter<AccountDTO, Account> {

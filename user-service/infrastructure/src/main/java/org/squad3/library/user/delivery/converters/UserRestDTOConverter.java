@@ -1,5 +1,6 @@
 package org.squad3.library.user.delivery.converters;
 
+import lombok.AllArgsConstructor;
 import org.squad3.library.shared.RestDTOConverter;
 import org.squad3.library.user.Account;
 import org.squad3.library.user.Role;
@@ -8,12 +9,13 @@ import org.squad3.library.user.delivery.rest.dto.UserDTO;
 
 import java.util.Optional;
 
+@AllArgsConstructor
 public class UserRestDTOConverter implements RestDTOConverter<UserDTO, User> {
 
-    private AccountRestDTOConverter accountRestDTOConverter;
+    private final AccountRestDTOConverter accountRestDTOConverter;
+
     @Override
     public UserDTO mapToDTO(User user) {
-        //TODO: convert user to DTO
         return Optional.ofNullable(user)
                 .map(u -> {
                     return UserDTO.builder()
@@ -29,7 +31,6 @@ public class UserRestDTOConverter implements RestDTOConverter<UserDTO, User> {
 
     @Override
     public User mapToEntity(UserDTO reqDTO) {
-        //TODO: convert dto to entity
         final Role role = Role.builder().roleName(reqDTO.getRole()).build();
         final Account account = accountRestDTOConverter.mapToEntity(reqDTO.getAccount());
         return User.builder()
