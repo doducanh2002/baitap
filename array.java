@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class arrayList {
+public class array {
     public static int total(int[] arr){
         int total =0;
         for (int i = 0; i < 10; i++) {
