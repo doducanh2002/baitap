@@ -1,0 +1,33 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="20211103-1425-001" author="DucAnh">
+        <createTable tableName="document">
+            <column name="id" type="integer" autoIncrement="true">
+                <constraints primaryKey="true" primaryKeyName="pk_document_id"/>
+            </column>
+            <column name="name" type="varchar(20)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="author" type="varchar(30)"/>
+            <column name="description" type="varchar(160)"/>
+            <column name="file" type="varchar(90)"/>
+            <column name="thumb" type="varchar(90)"/>
+            <column name="title" type="varchar(65)"/>
+            <column name="type" type="varchar(10)"/>
+            <column name="created_by" type="varchar(30)"/>
+            <column name="updated_by" type="varchar(30)"/>
+            <column name="created_date" type="TIMESTAMP"/>
+            <column name="updated_date" type="TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+
+
+
+</databaseChangeLog>
