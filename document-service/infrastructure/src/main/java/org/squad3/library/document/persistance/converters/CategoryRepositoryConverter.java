@@ -14,8 +14,6 @@ public class CategoryRepositoryConverter implements RepositoryConverter<Category
                 .map(ap -> {
                     return CategoryEntity.builder()
                             .name(ap.getName())
-                            .createdBy(ap.getCreatedBy())
-                            .updateBy(ap.getUpdatedBy())
                             .build();
                 })
                 .orElse(null);
@@ -28,8 +26,6 @@ public class CategoryRepositoryConverter implements RepositoryConverter<Category
                     return Category.builder()
                             .id(at.getId())
                             .name(at.getName())
-                            .createdBy(at.getCreatedBy())
-                            .updatedBy(at.getUpdateBy())
                             .build();
                 })
                 .orElse(null);

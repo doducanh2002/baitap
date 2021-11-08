@@ -21,29 +21,28 @@ public class DocumentEntity extends BaseEntity {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "name", length = 20)
-    private String name;
-
-    @Column(name = "author", length = 20)
+    @Column(name = "author", length = 32)
     private String author;
 
-    @Column(name = "description", length = 160)
     private String description;
 
-    @Column(name = "title", length = 65)
+    @Column(name = "title", length = 128)
     private String title;
 
-    @Column(name = "thumb", length = 90)
-    private String thumb;
+    @Column(name = "thumb_s3_object_key", length = 256)
+    private String thumb_s3_object_key;
 
-    @Column(name = "type", length = 10)
+    @Column(name = "file_s3_object_key", length = 256)
+    private String file_s3_object_key;
+
+    @Column(name = "type", length = 16)
     private String type;
 
-    @Column(name = "createdBy", length = 30)
-    private String createdBy;
+    @Column(name = "createdBy")
+    private Integer createdBy;
 
-    @Column(name = "updateBy", length = 30)
-    private String updateBy;
+    @Column(name = "updateBy")
+    private Integer lastUpdateBy;
 
 
     @Override

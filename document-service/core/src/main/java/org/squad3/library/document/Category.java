@@ -19,15 +19,6 @@ public class Category extends SelfValidating<Category> implements Serializable {
     @Length(max = 20, message = "Max length of name is 20 characters.")
     private String name;
 
-    @NotBlank(message = "The created by must not be null.")
-    @Length(max = 30, message = "Max length of created by is 30 characters.")
-    private String createdBy;
-
-    @NotBlank(message = "The updated by must not be null.")
-    @Length(max = 30, message = "Max length of updated by is 30 characters.")
-    private String updatedBy;
-
-
     @Override
     public boolean equals(Object o) {
         if (this ==o)   return true;

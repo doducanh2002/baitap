@@ -9,20 +9,25 @@
 
     <changeSet id="20211103-1425-001" author="DucAnh">
         <createTable tableName="document-category">
-            <column name="id" type="integer">
-                <constraints primaryKey="true" primaryKeyName="pk_document_category_id"/>
-            </column>
             <column name="document_id" type="integer">
-                <constraints nullable="false"/>
+                <constraints primaryKey="true" primaryKeyName="pk_document_id"/>
             </column>
             <column name="category_id" type="integer">
-                <constraints nullable="false"/>
+                <constraints primaryKey="true" primaryKeyName="pk_category_id"/>
             </column>
-            <column name="created_by" type="varchar(30)"/>
-            <column name="updated_by" type="varchar(30)"/>
             <column name="created_date" type="TIMESTAMP"/>
-            <column name="updated_date" type="TIMESTAMP"/>
+            <column name="last_updated_date" type="TIMESTAMP"/>
         </createTable>
+    </changeSet>
+    <changeSet id="20211103-1425-001" author="DucAnh">
+        <addForeignKeyConstraint
+                baseTableName="document_category" baseColumnNames="document_id"
+                constraintName="fk_document_category_relation_document_by_documnet_id"
+                referencedTableName="document" referencedColumnNames="id"/>
+        <addForeignKeyConstraint
+                baseTableName="document_category" baseColumnNames="category_id"
+                constraintName="fk_documnet_category_relation_category_by_category_id"
+                referencedTableName="category" referencedColumnNames="id"/>
     </changeSet>
 
 

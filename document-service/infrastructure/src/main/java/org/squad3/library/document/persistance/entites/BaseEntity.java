@@ -23,6 +23,6 @@ public abstract class BaseEntity implements Serializable {
     protected Instant createdDate;
 
     @LastModifiedDate
-    @Column(name = "updated_date")
-    protected Instant updatedDate;
+    @Column(name = "last_updated_date", nullable = false, updatable = false)
+    protected Instant lastUpdatedDate;
 }

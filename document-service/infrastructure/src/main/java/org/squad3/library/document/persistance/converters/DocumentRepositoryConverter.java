@@ -16,12 +16,12 @@ public class DocumentRepositoryConverter implements RepositoryConverter<Document
         return Optional.ofNullable(documentPersistence)
                 .map(ap -> {
                     return DocumentEntity.builder()
-                            .name(ap.getName())
                             .author(ap.getAuthor())
                             .description(ap.getDescription())
                             .createdBy(ap.getCreatedBy())
-                            .updateBy(ap.getUpdatedBy())
-                            .thumb(ap.getThumb())
+                            .lastUpdateBy(ap.getLast_UpdatedBy())
+                            .thumb_s3_object_key(ap.getThumb_s3_object_key())
+                            .file_s3_object_key(ap.getFile_s3_object_key())
                             .title(ap.getTitle())
                             .type(ap.getType())
                             .build();
@@ -35,12 +35,12 @@ public class DocumentRepositoryConverter implements RepositoryConverter<Document
                 .map(at -> {
                     return Document.builder()
                             .id(at.getId())
-                            .name(at.getName())
                             .author(at.getAuthor())
                             .description(at.getDescription())
                             .createdBy(at.getCreatedBy())
-                            .updatedBy(at.getUpdateBy())
-                            .thumb(at.getThumb())
+                            .last_UpdatedBy(at.getLastUpdateBy())
+                            .file_s3_object_key(at.getFile_s3_object_key())
+                            .thumb_s3_object_key(at.getThumb_s3_object_key())
                             .title(at.getTitle())
                             .type(at.getType())
                             .build();

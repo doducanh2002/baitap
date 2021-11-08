@@ -9,7 +9,4 @@ public class CategoryDTO {
 
     private String name;
 
-    private String createdBy;
-
-    private String updatedBy;
 }

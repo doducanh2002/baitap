@@ -13,15 +13,14 @@ public class DocumentRestDTOConverter implements RestDTOConverter<DocumentDTO, D
         return Optional.ofNullable(documentDTO)
                 .map(adto -> {
                     return Document.builder()
-                            .name(adto.getName())
                             .author(adto.getAuthor())
                             .description(adto.getDescription())
                             .title(adto.getTitle())
-                            .file(adto.getFile())
-                            .thumb(adto.getThumb())
+                            .file_s3_object_key(adto.getFile_s3_object_key())
+                            .thumb_s3_object_key(adto.getThumb_s3_object_key())
                             .type(adto.getType())
                             .createdBy(adto.getCreateBy())
-                            .updatedBy(adto.getUpdateBy())
+                            .last_UpdatedBy(adto.getLastUpdateBy())
                             .build();
                 })
                 .orElse(null);
@@ -32,15 +31,14 @@ public class DocumentRestDTOConverter implements RestDTOConverter<DocumentDTO, D
         return Optional.ofNullable(document)
                 .map(a -> {
                     return DocumentDTO.builder()
-                            .name(a.getName())
                             .author(a.getAuthor())
                             .description(a.getDescription())
                             .title(a.getTitle())
-                            .file(a.getFile())
-                            .thumb(a.getThumb())
+                            .file_s3_object_key(a.getFile_s3_object_key())
+                            .thumb_s3_object_key(a.getThumb_s3_object_key())
                             .type(a.getType())
                             .createBy(a.getCreatedBy())
-                            .updateBy(a.getUpdatedBy())
+                            .lastUpdateBy(a.getLast_UpdatedBy())
                             .build();
                 })
                 .orElse(null);

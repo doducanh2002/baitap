@@ -7,22 +7,20 @@ import lombok.Data;
 @Builder
 public class DocumentDTO {
 
-    private String name;
-
     private String author;
 
     private String description;
 
-    private String file;
+    private String file_s3_object_key;
 
-    private String thumb;
+    private String thumb_s3_object_key;
 
     private String title;
 
     private String type;
 
-    private String createBy;
+    private Integer createBy;
 
-    private String updateBy;
+    private Integer lastUpdateBy;
 
 }

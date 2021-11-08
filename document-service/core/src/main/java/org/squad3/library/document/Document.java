@@ -17,42 +17,32 @@ public class Document extends SelfValidating<Document> implements Serializable {
 
     private Integer id;
 
-    @NotBlank(message = "The document's name must not be null.")
-    @Length(max = 20, message = "Max length of name is 20 characters.")
-    private String name;
-
-    @NotBlank(message = "The author must not be null.")
-    @Length(max = 30, message = "Max length of author is 30 characters.")
-    private String author;
-
-    @NotBlank(message = "The description  must not be null.")
-    @Length(max = 160, message = "Max length of description is 160 characters.")
-    private String description ;
-
     @NotBlank(message = "The title must not be null.")
-    @Length(max = 65, message = "Max length of title is 65 characters.")
+    @Length(max = 128, message = "Max length of title is 128 characters.")
     private String title;
 
-    @Length(max = 65, message = "Max length of file is 65 characters.")
-    private String file;
+    @NotBlank(message = "The description  must not be null.")
+    private String description ;
 
-    @Length(max = 90, message = "Max length of thumb is 90 characters.")
-    private String thumb;
+    @NotBlank(message = "The author must not be null.")
+    @Length(max = 32, message = "Max length of author is 32 characters.")
+    private String author;
+
+    @Length(max =256, message = "Max length of file_s3_object_key is 256 characters.")
+    private String file_s3_object_key;
+
+    @Length(max = 256, message = "Max length of objectKey_thumb is 256 characters.")
+    private String thumb_s3_object_key;
 
     @NotBlank(message = "The type by must not be null.")
-    @Length(max = 10, message = "Max length of type is 30 characters.")
+    @Length(max = 16, message = "Max length of type is 16 characters.")
     private String type;
 
     @NotBlank(message = "The created by must not be null.")
-    @Length(max = 30, message = "Max length of created by is 30 characters.")
-    private String createdBy;
+    private Integer createdBy;
 
     @NotBlank(message = "The updated by must not be null.")
-    @Length(max = 30, message = "Max length of updated by is 30 characters.")
-    private String updatedBy;
-
-    @NotNull(message = "Category must not be null.")
-    private @Valid Category category;
+    private Integer last_UpdatedBy;
 
     @Override
     public boolean equals(Object o) {

@@ -21,14 +21,9 @@ public class CategoryEntity extends BaseEntity {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "name", length = 20)
+    @Column(name = "name", length = 32)
     private String name;
 
-    @Column(name = "createdBy", length = 30)
-    private String createdBy;
-
-    @Column(name = "updateBy", length = 30)
-    private String updateBy;
 
     @Override
     public int hashCode() {

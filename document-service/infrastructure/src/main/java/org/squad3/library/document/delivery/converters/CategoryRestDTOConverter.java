@@ -14,8 +14,6 @@ public class CategoryRestDTOConverter implements RestDTOConverter<CategoryDTO, C
                         .map(adto -> {
                                 return Category.builder()
                                         .name(adto.getName())
-                                        .createdBy(adto.getCreatedBy())
-                                        .updatedBy(adto.getUpdatedBy())
                                         .build();
                         })
                         .orElse(null);
@@ -27,8 +25,6 @@ public class CategoryRestDTOConverter implements RestDTOConverter<CategoryDTO, C
                         .map(a -> {
                                  return CategoryDTO.builder()
                                         .name(a.getName())
-                                        .createdBy(a.getCreatedBy())
-                                        .updatedBy(a.getUpdatedBy())
                                         .build();
                         })
                         .orElse(null);
