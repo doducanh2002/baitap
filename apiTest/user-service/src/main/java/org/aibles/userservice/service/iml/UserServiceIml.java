@@ -1,6 +1,7 @@
 package org.aibles.userservice.service.iml;
 
 
+import org.aibles.userservice.exception.UserNotFoundException;
 import org.aibles.userservice.model.User;
 import org.aibles.userservice.repository.UserRepository;
 import org.aibles.userservice.service.UserService;
@@ -27,15 +28,15 @@ public class UserServiceIml implements UserService {
     }
 
     @Override
-    public User updateUser(int userId, User user) {
+    public User updateUser(int userId, User userReq) {
         User result = userRepository.findById(userId)
-                .map(userNew -> {
-                    user.setName(user.getName());
-                    user.setAge(user.getAge());
+                .map(user -> {
+                    user.setName(userReq.getName());
+                    user.setAge(userReq.getAge());
                     return user;
                 })
                 .map(userRepository::save)
-                .orElse(null);
+                .orElseThrow(UserNotFoundException::new);
         return result;
     }
 
@@ -45,7 +46,7 @@ public class UserServiceIml implements UserService {
                 .map(user -> {
                     userRepository.delete(user);
                     return user;
-                }).orElse(null);
+                }).orElseThrow(UserNotFoundException::new);
 
     }
 
@@ -54,5 +55,10 @@ public class UserServiceIml implements UserService {
         return userRepository.findAll();
     }
 
+    @Override
+    public User getUserById(int userId) {
+        return userRepository.findById(userId)
+                .orElseThrow(UserNotFoundException::new);
+    }
 }
 

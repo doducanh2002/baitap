@@ -29,8 +29,8 @@ public class UserController {
 
     @PutMapping("/{user_id}")
     public ResponseEntity<User> updateUser(@PathVariable("user_id") int userId,
-                                           @RequestBody User user) {
-        final User updatedUser = userService.updateUser(userId, user);
+                                           @RequestBody User userReq) {
+        final User updatedUser = userService.updateUser(userId, userReq);
         return new ResponseEntity<>(updatedUser, HttpStatus.OK);
 
     }
@@ -46,6 +46,12 @@ public class UserController {
     public ResponseEntity<List<User>> listUsers() {
         final List<User> users = userService.listUsers();
         return new ResponseEntity<>(users, HttpStatus.OK);
+    }
+
+    @GetMapping("/{user_id}")
+    public ResponseEntity<User> getUserById(@PathVariable("user_id") int userId){
+        final User user = userService.getUserById(userId);
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 }
 

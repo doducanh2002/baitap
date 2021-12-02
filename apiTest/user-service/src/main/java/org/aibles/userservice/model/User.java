@@ -1,9 +1,10 @@
 package org.aibles.userservice.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.hibernate.validator.constraints.Length;
+
+import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 @Entity
@@ -11,12 +12,16 @@ import java.io.Serializable;
 public class User implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
+    @NotBlank(message = "The user's name must not be null.")
+    @Length(max = 32, message = "Max length of name is 30 characters.")
     @Column(name = "name")
     private String name;
 
+    @Min(value = 0, message = "Age should not be less than 0")
     @Column(name = "age")
     private int age;
 

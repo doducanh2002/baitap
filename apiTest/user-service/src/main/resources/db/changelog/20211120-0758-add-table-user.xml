@@ -6,8 +6,8 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
     <changeSet id="20211120-0758-001" author="DucAnh">
-        <createTable tableName="user">
-            <column name="id" type="INTEGER" autoIncrement="true">
+        <createTable tableName="users">
+            <column name="id" type="integer" autoIncrement="true">
                 <constraints primaryKey="true" primaryKeyName="pk_user_id"/>
             </column>
             <column name="name" type="VARCHAR(256)"/>
