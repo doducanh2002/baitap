@@ -1,7 +1,6 @@
 package org.aibles.userservice.service.iml;
 
-
-import org.aibles.userservice.exception.UserNotFoundException;
+    import org.aibles.userservice.exception2.UserNotFoundException;
 import org.aibles.userservice.model.User;
 import org.aibles.userservice.repository.UserRepository;
 import org.aibles.userservice.service.UserService;
