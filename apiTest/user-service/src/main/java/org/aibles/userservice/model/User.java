@@ -1,5 +1,6 @@
 package org.aibles.userservice.model;
 
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class User implements Serializable {
 
     @Id
