@@ -1,10 +1,3 @@
-xmanagement:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  security:
-    enabled: false
 spring:
   cache:
     cache-names:
@@ -15,12 +8,11 @@ bucket4j:
   enabled: true
   filters:
     - cache-name: buckets
-      filter-order: 1
       url: .*
       rate-limits:
         - execute-condition:  "1==1"
           expression: "getRemoteAddr()"
           bandwidths:
             - capacity: 3
-              time: 1
-              unit: minutes
+              time: 1000
+              unit: seconds

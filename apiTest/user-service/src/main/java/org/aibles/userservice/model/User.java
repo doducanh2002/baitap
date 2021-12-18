@@ -10,7 +10,6 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
-@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class User implements Serializable {
 
     @Id
