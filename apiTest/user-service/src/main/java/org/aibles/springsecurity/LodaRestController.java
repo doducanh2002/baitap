@@ -1,9 +1,10 @@
-package com.example.springsecurity;
+package org.aibles.springsecurity;
 
-import com.example.springsecurity.jwt.JwtTokenProvider;
-import com.example.springsecurity.payload.LoginRequest;
-import com.example.springsecurity.payload.LoginResponse;
-import com.example.springsecurity.payload.RandomStuff;
+import org.aibles.springsecurity.jwt.JwtTokenProvider;
+import org.aibles.springsecurity.payload.LoginRequest;
+import org.aibles.springsecurity.payload.LoginResponse;
+import org.aibles.springsecurity.payload.RandomStuff;
+import org.aibles.springsecurity.user.CustomUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -11,6 +12,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api")

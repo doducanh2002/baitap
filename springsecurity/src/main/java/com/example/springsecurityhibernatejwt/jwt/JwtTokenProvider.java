@@ -1,7 +1,6 @@
-package com.example.springsecurity.jwt;
+package com.example.springsecurityhibernatejwt.jwt;
 
-import com.example.springsecurity.user.CustomUserDetails;
-import com.fasterxml.jackson.databind.DatabindException;
+import com.example.springsecurityhibernatejwt.user.CustomUserDetails;
 import io.jsonwebtoken.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -11,29 +10,27 @@ import java.util.Date;
 @Component
 @Slf4j
 public class JwtTokenProvider {
-
-    private final String JWT_SECRET = "squad3";
-
+    private final String JWT_SECRET = "lodaaaaaa";
     private final long JWT_EXPIRATION = 604800000L;
 
     public String generateToken(CustomUserDetails userDetails) {
+        // Lấy thông tin user
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + JWT_EXPIRATION);
         // Tạo chuỗi json web token từ id của user.
         return Jwts.builder()
-                .setSubject(Long.toString(userDetails.getUser().getId()))
-                .setIssuedAt(now)
-                .setExpiration(expiryDate)
-                .signWith(SignatureAlgorithm.HS512, JWT_SECRET)
-                .compact();
+                   .setSubject(Long.toString(userDetails.getUser().getId()))
+                   .setIssuedAt(now)
+                   .setExpiration(expiryDate)
+                   .signWith(SignatureAlgorithm.HS512, JWT_SECRET)
+                   .compact();
     }
 
-    // Lấy thông tin user từ jwt
     public Long getUserIdFromJWT(String token) {
         Claims claims = Jwts.parser()
-                .setSigningKey(JWT_SECRET)
-                .parseClaimsJws(token)
-                .getBody();
+                            .setSigningKey(JWT_SECRET)
+                            .parseClaimsJws(token)
+                            .getBody();
 
         return Long.parseLong(claims.getSubject());
     }

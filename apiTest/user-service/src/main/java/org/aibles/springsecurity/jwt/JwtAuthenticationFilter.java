@@ -1,11 +1,13 @@
-package com.example.springsecurity.jwt;
+package org.aibles.springsecurity.jwt;
 
-import com.example.springsecurity.user.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.aibles.springsecurity.jwt.JwtTokenProvider;
+import org.aibles.springsecurity.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -17,6 +19,7 @@ import java.io.IOException;
 
 @Slf4j
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
+
     @Autowired
     private JwtTokenProvider tokenProvider;
 

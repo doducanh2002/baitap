@@ -1,4 +1,4 @@
-package com.example.springsecurity.user;
+package com.example.springsecurityhibernatejwt.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,25 +9,28 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
+
 @Data
 @AllArgsConstructor
 public class CustomUserDetails implements UserDetails {
     User user;
 
     @Override
-    public Collection<? extends GrantedAuthority> getAuthorities(){
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        // Mặc định mình sẽ để tất cả là ROLE_USER. Để demo cho đơn giản.
         return Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"));
     }
 
     @Override
-    public String getPassword(){
+    public String getPassword() {
         return user.getPassword();
     }
 
     @Override
-    public String getUsername(){
+    public String getUsername() {
         return user.getUsername();
     }
+
     @Override
     public boolean isAccountNonExpired() {
         return true;

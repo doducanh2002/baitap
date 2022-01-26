@@ -1,19 +1,20 @@
-package com.example.springsecurity.user;
+package com.example.springsecurityhibernatejwt.user;
 
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 @Data
 public class User {
-
     @Id
     @GeneratedValue
     private Long id;
 
-    @Column(nullable = false,unique = true)
+    @Column(nullable = false, unique = true)
     private String username;
+
+    @Column(nullable = false, unique = true)
     private String password;
 }
