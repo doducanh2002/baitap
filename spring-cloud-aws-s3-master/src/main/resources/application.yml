@@ -1,0 +1,26 @@
+##Application properties
+#server:
+#  port: 8081
+#
+#
+##AWS properties
+#cloud:
+#  aws:
+#    region:
+#      static: ap-south-1
+#    stack:
+#      auto: false
+#    credentials:
+#      accessKey: AKIARWBH4GY3KV374BCM
+#      secretKey: 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
+#
+#application:
+#  bucket:
+#    name: aibles-squad3
+#
+#logging:
+#  level:
+#    com:
+#      amazonaws:
+#        util:
+#          EC2MetadataUtils: error
