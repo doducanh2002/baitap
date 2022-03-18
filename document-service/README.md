@@ -1,4 +1,4 @@
-# user-service
+# document-service
 
 ## Getting started
 
@@ -17,7 +17,7 @@ easy? [Use the template at the bottom](#editing-this-readme)!
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/aibles-group/squad3-library/library-system-backend/user-service.git
+git remote add origin https://gitlab.com/aibles-group/squad3-library/library-system-backend/document-service.git
 git branch -M main
 git push -uf origin main
 ```
