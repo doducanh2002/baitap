@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-hateoas" />
+        <module name="aop" />
+        <module name="template-mustache" />
+        <module name="template-freemarker" />
+        <module name="enable-scheduling" />
+        <module name="template-thymeleaf" />
+        <module name="server-customization" />
+        <module name="spring-webflux-demo" />
+        <module name="spring-reactive" />
+        <module name="oauth2" />
+        <module name="batch-decorator" />
+        <module name="command-line-runner" />
+        <module name="rest-crud-hibernate" />
+        <module name="main-class" />
+        <module name="rmi-server" />
+        <module name="hessian-client" />
+        <module name="minimum-setup" />
+        <module name="rmi-client" />
+        <module name="custom-spring-boot-banner" />
+        <module name="logger-configuration" />
+        <module name="email" />
+        <module name="resttemplate" />
+        <module name="embedded-jetty-server" />
+        <module name="boot-hateoas" />
+        <module name="hessian-server" />
+        <module name="ssl-https" />
+        <module name="packaging-war" />
+        <module name="i18n" />
+        <module name="get-loaded-beans-info" />
+        <module name="batch-partitioner" />
+        <module name="template-jsp" />
+        <module name="disable-spring-boot-banner" />
+        <module name="rest-jersey-example" />
+        <module name="context-path-server-port" />
+        <module name="swagger-ui" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="oauth2" options="-parameters" />
+    </option>
+  </component>
+</project>
