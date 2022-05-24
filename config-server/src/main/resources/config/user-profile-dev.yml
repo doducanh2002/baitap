@@ -1,0 +1,6 @@
+#mysql config
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/LM_USER_PROFILE
+    username: lm_user_profile
+    password: lm@user2022
