@@ -37,16 +37,6 @@ public class UserServiceImpl implements UserService {
     return mappingHelper.map(repository.save(user), UserResponseDTO.class);
   }
 
-//  @Override
-//  public UserResponseDTO create(SignUpRequest request) {
-//    log.info("(register)username : {}", request.getUsername());
-//    if (repository.existsByUsername(request.getUsername())) {
-//      throw new UsernameExistedException(request.getUsername());
-//    }
-//    User user = mappingHelper.map(request, User.class);
-//    return mappingHelper.map(repository.save(user), UserResponseDTO.class);
-//  }
-
   @Override
   public void register(SignUpRequest request) {
     log.info("(register)username : {}", request.getUsername());
@@ -56,21 +46,5 @@ public class UserServiceImpl implements UserService {
     User user = request.toUser();
     repository.save(user);
   }
-
-  @Override
-
-  public void logout(String authorizationHeader) {
-    log.info("(logout)header : {}", authorizationHeader);
-    String token = authorizationHeader;
-    User user =
-            repository
-                    .findByUsername(BasicAuthUtil.getInstance().getUsernameFromToken(token))
-                    .orElseThrow(
-                            () ->
-                                    new NotFoundException(
-                                            BasicAuthUtil.getInstance().getUsernameFromToken(token), TYPE_OF_OBJECT));
-    repository.save(user);
-  }
-
 
 }

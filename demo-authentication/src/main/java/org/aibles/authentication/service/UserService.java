@@ -6,11 +6,7 @@ import org.aibles.authentication.dto.request.SignUpRequest;
 
 public interface UserService {
 
-//  UserResponseDTO create(SignUpRequest signUpRequest);
   UserResponseDTO login(LoginRequest loginRequest);
 
   void register(SignUpRequest request);
-
-  void logout(String authorizationHeader);
-
 }

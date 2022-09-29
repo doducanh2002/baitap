@@ -20,19 +20,6 @@ import javax.validation.Valid;
 public class UserController {
 
   private final UserService service;
-
-//  @PostMapping
-//  @ResponseStatus(HttpStatus.CREATED)
-//  public void create(@RequestBody @Validated LoginRequest loginRequest) {
-//    service.create(loginRequest);
-//  }
-
-//  @PostMapping
-//  @ResponseStatus(HttpStatus.CREATED)
-//  public ResponseEntity<UserResponseDTO> create(@RequestBody @Validated SignUpRequest signUpRequest){
-//    return ResponseEntity.status(HttpStatus.CREATED).body(service.create(signUpRequest));
-//  }
-
   @PostMapping("/login")
   @ResponseStatus(HttpStatus.OK)
   public ResponseEntity<UserResponseDTO> login(@RequestBody @Validated LoginRequest loginRequest) {
@@ -47,19 +34,4 @@ public class UserController {
     return "Register successfully!!!";
   }
 
-
-  @GetMapping("/hello")
-  @ResponseStatus(HttpStatus.OK)
-  public String greeting() {
-    return"Hello";
-  }
-
-
-  @GetMapping("/logout")
-  @ResponseStatus(HttpStatus.OK)
-  public String logout(@RequestHeader(name = "Authorization") String authorizationHeader) {
-    log.info("(logout)header : {}", authorizationHeader);
-    service.logout(authorizationHeader);
-    return "Logout successfully!!!";
-  }
 }
