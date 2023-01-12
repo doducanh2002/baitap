@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.ListIterator;
 
 public class SearchNumber {
 
@@ -10,7 +11,7 @@ public class SearchNumber {
         System.out.println("Các số chia hết cho 7 là: ");
         ArrayList<Integer> list = new ArrayList<>();
         searchNumber(list);
-        display(list);
+        display1(list);
     }
 
     public static void searchNumber(ArrayList<Integer> list) {
@@ -21,9 +22,19 @@ public class SearchNumber {
         }
     }
 
-    public static void display(ArrayList<Integer> list) {
-        for (int index = 0; index < list.size() - 1; index++) {
-            System.out.print(list.get(index) + ",");//lấy ra các số theo yêu cầu
+    //cách 1:
+    public static void display1(ArrayList<Integer> list) {
+        System.out.print(list);//lấy ra các số theo yêu cầu
+    }
+
+    //cách 2
+    public static void display2(ArrayList<Integer> list) {
+        ListIterator<Integer> iterator = list.listIterator();
+        System.out.println("Các phần tử có trong list là: ");
+        while (iterator.hasNext()) {
+            System.out.print((Integer) iterator.next() + ",");
         }
     }
+
+
 }
