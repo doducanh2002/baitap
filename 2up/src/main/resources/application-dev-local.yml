@@ -1,0 +1,44 @@
+spring:
+  data:
+    redis:
+      port: 6379
+      host: localhost
+      timeout: 10000
+  datasource:
+    url: jdbc:mysql://localhost:3306/b
+    username: root
+    password: 123456
+  #MAIL
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: luatnq.ptit@gmail.com
+    password: jauzfmwfliypshtd
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false
+server:
+  port: 8081
+application:
+  token:
+    access:
+      life-time: 100000
+      secret: 100000
+    refresh:
+      life-time: 10000
+      secret: 10000
+  email:
+    form: anh15042002hla@gmail.co
+logging:
+  level:
+    org:
+      springframework:
+        web : INFO
+      hibernate: ERROR
+      up : DEBUG

@@ -1,0 +1,55 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="20230302-2010-user-table" author="luatnq">
+        <createTable tableName="user">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="username" type="varchar(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="UQ_username"/>
+            </column>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="UQ_user_email"/>
+            </column>
+            <column name="password" type="varchar(255)"/>
+            <column name="is_activated" type="boolean"/>
+            <column name="full_name" type="varchar(255)"/>
+            <column name="created_at" type="bigint"/>
+            <column name="created_by" type="varchar(255)"/>
+            <column name="last_updated_at" type="bigint"/>
+            <column name="last_updated_by" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="20230308-1600-dailynote-table" author="oanhdtk">
+        <createTable tableName="daily_note">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="date" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="content" type="varchar(255)">
+                <constraints unique="false"/>
+            </column>
+            <column name="user_id" type="varchar(255)"/>
+            <column name="created_at" type="bigint"/>
+            <column name="created_by" type="varchar(255)"/>
+            <column name="last_updated_at" type="bigint"/>
+            <column name="last_updated_by" type="varchar(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="daily_note"
+                                 baseColumnNames="user_id"
+                                 constraintName="FK_daily_note_user"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"/>
+
+    </changeSet>
+
+</databaseChangeLog>

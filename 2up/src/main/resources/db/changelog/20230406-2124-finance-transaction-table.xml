@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+  <changeSet id="20230406-2124-finance-transaction-table" author="AnhNHS">
+    <createTable tableName="finance_transaction">
+      <column name="id" type="varchar(255)">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="type" type="varchar(255)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="amount" type="bigint">
+        <constraints nullable="false"/>
+      </column>
+      <column name="note" type="varchar(255)"/>
+      <column name="description" type="varchar(255)"/>
+      <column name="wallet_id" type="varchar(255)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="category_id" type="varchar(255)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="user_id" type="varchar(255)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="created_at" type="bigint"/>
+      <column name="created_by" type="varchar(255)"/>
+      <column name="last_updated_at" type="bigint"/>
+      <column name="last_updated_by" type="varchar(255)"/>
+    </createTable>
+    <addForeignKeyConstraint baseTableName="finance_transaction"
+      baseColumnNames="wallet_id" constraintName="FK_transaction_wallet"
+      referencedTableName="wallet" referencedColumnNames="id"/>
+    <addForeignKeyConstraint baseTableName="finance_transaction" baseColumnNames="category_id"
+      constraintName="FK_transaction_category" referencedTableName="category"
+      referencedColumnNames="id"/>
+    <addForeignKeyConstraint baseTableName="finance_transaction" baseColumnNames="user_id"
+      constraintName="FK_transaction_user"
+      referencedTableName="user" referencedColumnNames="id"/>
+  </changeSet>
+</databaseChangeLog>

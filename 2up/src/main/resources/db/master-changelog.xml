@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+  <include file="changelog/20230302-2010-finance-database-version1.xml"
+    relativeToChangelogFile="true"/>
+  <include file="/changelog/20230304-2345-wallet-group-table.xml" relativeToChangelogFile="true"/>
+  <include file="/changelog/20232802-1311-category-table.xml" relativeToChangelogFile="true"/>
+  <include file="/changelog/20230329-0030-wallet-table.xml" relativeToChangelogFile="true"/>
+  <include file="/changelog/20230406-2124-finance-transaction-table.xml"
+    relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
